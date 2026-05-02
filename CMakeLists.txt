@@ -23,6 +23,8 @@ add_custom_command(
     PRE_LINK
     COMMAND ${CMAKE_OBJCOPY} ARGS -I binary -O elf32-littlearm -B arm ../image0.bmp image0.o
     COMMAND ${CMAKE_OBJCOPY} ARGS -I binary -O elf32-littlearm -B arm ../image1.bmp image1.o
+    COMMAND ${CMAKE_OBJCOPY} ARGS -I binary -O elf32-littlearm -B arm ../image2.bmp image2.o
+    COMMAND ${CMAKE_OBJCOPY} ARGS -I binary -O elf32-littlearm -B arm ../image3.bmp image3.o
 )
 
 add_custom_command(TARGET ${TARGET_NAME}.elf
